@@ -1,0 +1,108 @@
+// media quary
+@mixin mediamopile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mediasmall {
+  @media (min-width: 577px) {
+    @content;
+  }
+}
+
+@mixin mediamedium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medialarg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mediaXlarg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// tow
+@mixin mediamopile2 {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mediasmall2 {
+  @media (max-width: 577px) {
+    @content;
+  }
+}
+
+@mixin mediamedium2 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medialarg2 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mediaXlarg2 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+//__
+// overlay
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @content;
+}
+
+//__
+// prefixer
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefixe in $prefixes {
+    #{'-' + $prefixe + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+//__ 
+// keyFram
+@mixin keyframe($naeKeyframe) {
+  @-webkit-keyframes #{$naeKeyframe} {
+    @content
+  };
+  @-moz-keyframes #{$naeKeyframe} {
+    @content
+  };
+  @-o-keyframes #{$naeKeyframe} {
+    @content
+  };
+  @keyframes #{$naeKeyframe} {
+    @content
+  };
+}
+
+//__
+// diraction 
+@mixin diraction {
+  @if ($diraction-left == 'english') {
+    flex-direction: row;
+    @content;
+  } @else if ($diraction-left == 'arabic') {
+    flex-direction: row-reverse;
+    @content;
+  }
+}

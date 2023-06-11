@@ -1,0 +1,24 @@
+// helpers
+@import './sass/helpers/variabels';
+@import './sass/helpers/mixin' ;
+@import './sass/helpers/function' ;
+
+//__
+// components
+@import './sass/components/botton';
+@import './sass/components/totleOfSections';
+//__
+// layout
+
+@import './sass/layout/global'; 
+@import './sass/layout/grid'; 
+@import './sass/layout/footer';
+@import './sass/layout/header';
+
+//__
+// pages
+@import './sass/pages/homePage' ;
+//__
+
+
+

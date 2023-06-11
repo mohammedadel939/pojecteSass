@@ -1,0 +1,155 @@
+//start slider
+.slider .container {
+  padding: 50px 10px;
+  blockquote {
+    @include mediamopile2 {
+      margin: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    font-style: italic;
+    color: rgb(54 47 47);
+    font-weight: bold;
+    width: 80%;
+    margin: 30px auto;
+  }
+  img {
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
+    height: 40vh;
+  }
+  ul {
+    display: flex;
+    @include diraction;
+    margin: 20px 0;
+    justify-content: center;
+    li {
+      width: 20px;
+      height: 20px;
+      background-color: $grayColor;
+      border-radius: 50%;
+      margin: 0 2px;
+      &.active,
+      &:hover {
+        border: 2px solid #333;
+        background-color: white;
+      }
+    }
+  }
+}
+//end slider
+
+// start services
+.services-boxes {
+  @include mediasmall2 {
+    flex-direction: column;
+  }
+  display: flex;
+  @include diraction;
+  .sevrices-box {
+    @include mediasmall2 {
+      padding: 0;
+      text-align: center;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      padding-right: 20px;
+    }
+    h3 {
+      color: $grayColor;
+      font-size: 1.5em;
+
+      i {
+        position: relative;
+        top: 2px;
+      }
+    }
+    p {
+      color: $grayColor;
+      font-size: 1.3em;
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+    a {
+      color: $redColor;
+    }
+  }
+}
+// end services
+// start ourwork
+.ourworks-boxes {
+  @include mediasmall2 {
+    justify-content: center
+  }
+  @include diraction;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 30px;
+
+  .ourwork-box {
+    @include mediasmall2 {
+      width: 100%;
+
+    }
+    width: 300px;
+    //   margin: 0 30px 10px 0;
+
+    img {
+      width: 100%;
+    }
+    h3 {
+      span {
+        color: $redColor;
+      }
+      color: $grayColor;
+    }
+    p {
+      color: $grayColor;
+      font-size: 1.3em;
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+    a {
+      color: $redColor;
+    }
+  }
+}
+// end ourwork
+// start lorem ipsum
+.images {
+  margin: 50px 0;
+  @include mediamedium2 {
+    margin: 50px 0;
+    
+  }
+  @include diraction;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  .image {
+    @include mediasmall2 {
+      width: 100%;
+
+    }
+    width: 300px;
+    height: 400px;
+    position: relative;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .image:hover .overlay {
+    @include overlay {
+      background-color: rgba(0, 0, 0, 50%);
+      transition: 0.5s;
+    }
+  }
+}
+// end lorem ipsum

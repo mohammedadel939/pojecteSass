@@ -1,0 +1,24 @@
+* {
+    @include prefixer(box-sizing, border-box, webkit moz o);
+}
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+    @include mediamopile {
+        width: 100%;
+    }
+    @include mediasmall {
+        width: 557px;
+    }
+    @include mediamedium {
+        width: 750px;
+    }
+    @include medialarg {
+        width: 970px;
+    }
+    
+    @include mediaXlarg {
+        width: 1170px;
+    }
+    
+}

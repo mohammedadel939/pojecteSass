@@ -1,0 +1,16 @@
+.main-bottom {
+    background-color: rgba($redColor, .8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 120px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3;
+    &:hover {
+        background-color: $redColor;
+    }
+}

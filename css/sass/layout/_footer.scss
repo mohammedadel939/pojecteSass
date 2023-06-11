@@ -1,0 +1,79 @@
+.footer {
+  background-color: #aaa;
+  .container {
+      @include mediamedium2{
+          display: block;
+        }
+        display: flex;
+        overflow: hidden;
+        @include diraction;
+        
+        h3 {
+            color: #00000080;
+        }
+
+    .galery {
+        @include mediamedium2 {
+            width: auto;
+        }
+        width: 60%;
+ 
+        .img-box {
+            @include mediasmall2 {
+                display: block;
+            }
+            width: 100%;
+            display: flex;
+            margin-bottom: 10px;
+            .img {
+                @include mediasmall2 {
+                    width: 100%;
+                }
+                width: 130px;
+                height: 130px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .text {
+                width: 70%;
+                h4 {
+                    margin: 0 0 15px;
+                    color: $redColor;
+                }
+                p {
+                    color: $grayColor;
+                }
+            }
+        }
+    }
+
+    .info {
+
+    }
+
+    .contact {
+        form {
+            input{
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            display: flex;
+            flex-direction: column;
+            input[type='text'], input[type='email']{
+                height: 40px;
+            }
+            textarea {
+                @include mediasmall2 {
+
+                    height: 100%;
+                }
+             height: 100px;
+             margin-bottom: 10px;
+            }
+        }
+    }
+  }
+}
